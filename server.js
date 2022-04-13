@@ -12,8 +12,8 @@ server.use(express.static("js"));
 server.use(express.urlencoded({extended:false}));
 
 
-const PORT = process.env.PORT || 3000;;
-server.listen(PORT, 'localhost', (error) => {
+const port = process.env.PORT || 3000;;
+server.listen(port, 'localhost', (error) => {
     if(error) console.log(error);
     else console.log(`listening port ${PORT}`)});
 
