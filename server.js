@@ -15,7 +15,7 @@ server.use(express.urlencoded({extended:false}));
 const port = process.env.PORT || 3000;;
 server.listen(port, 'localhost', (error) => {
     if(error) console.log(error);
-    else console.log(`listening port ${PORT}`)});
+    else console.log(`listening port ${port}`)});
 
 
 server.get('/', (req, res) => {
