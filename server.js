@@ -1,5 +1,4 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
 
 const createPath = (page) => path.resolve(__dirname, `${page}.html`);
@@ -12,10 +11,10 @@ server.use(express.static("js"));
 server.use(express.urlencoded({extended:false}));
 
 
-const port = process.env.PORT || 3000;;
-server.listen(port, 'localhost', (error) => {
+const PORT = process.env.PORT || 80;;
+server.listen(PORT, 'localhost', (error) => {
     if(error) console.log(error);
-    else console.log(`listening port ${port}`)});
+    else console.log(`listening port ${PORT}`)});
 
 
 server.get('/', (req, res) => {
