@@ -12,7 +12,7 @@ server.use(express.urlencoded({extended:false}));
 
 
 const PORT = process.env.PORT || 80;;
-server.listen(PORT, 'localhost', (error) => {
+server.listen(PORT, "0.0.0.0", (error) => {
     if(error) console.log(error);
     else console.log(`listening port ${PORT}`)});
 
